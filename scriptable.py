@@ -40,8 +40,14 @@ def scriptable(func_path, *args):
                 pass
         print(output)
 
-if __name__ == '__main__':
-    if len(sys.argv) <= 1:
+def main(argv=None):
+    """Entry point when used from command line"""
+    if not argv:
+        argv = sys.argv
+    if len(argv) <= 1:
         print(USAGE)
-        sys.exit(1)
-    scriptable(*sys.argv[1:])       # pylint: disable=W0142
+        return 1
+    scriptable(*argv[1:])       # pylint: disable=W0142
+
+if __name__ == '__main__':
+    sys.exit(main())
