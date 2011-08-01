@@ -22,6 +22,16 @@ All of a sudden you learn that you can't load the data yourself, it's going to c
 
     data_provider | scriptable.py pkg.munge_data | scriptable.py pkg.output
 
+## Install
+
+- As an executable:
+    1. chmod it to be executable.
+    2. Copy it into ~/bin/ (if you use that) or /usr/local/bin. Bonus points: Rename it to just `scriptable` (instead of `scriptable.py`).
+
+- As a module:
+    1. Copy it into your PYTHONPATH.
+    2. Run it like this: `python -m scriptable mypackage.myfunc`
+
 ## Details
 
 Not all functions are suitable for this type of pipeling.
